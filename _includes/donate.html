@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Website</title>
+  </head>
+  <body>
+    <h1>Did You Liked My Website?!</h1>
+    <p>Please feel free to check my social page and contact me if you have anything for me to say😉<br>
+      I'll be happy with that!</p>
+
+    
+    <div class="donate">
+      <p id="ip">Loading IP address...</p>
+      <p id="location">Loading location...</p>
+      <p id="time">Loading local time...</p>
+    </div>
+
+    <script>
+      fetch("https://api.ipdata.co?api-key=008abb2ebdef31a11d5ce7693ce42de5a69a66af1e88699a327820b8")
+        .then(response => response.json())
+        .then(data => {
+          var ip = data.ip;
+          var location = data.city + ", " + data.region + ", " + data.country_name;
+          var time = new Date();
+          time.setMinutes(time.getMinutes() + time.getTimezoneOffset() + data.time_zone.offset / 60);
+          document.getElementById("ip").innerHTML = "Your IP address: " + ip;
+          document.getElementById("location").innerHTML = "Your location: " + location;
+          document.getElementById("time").innerHTML = "Your local time: " + time.toLocaleString();
+        })
+        .catch(error => console.log(error));
+    </script>
+  </body>
+</html>
