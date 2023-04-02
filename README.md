@@ -2,7 +2,7 @@
 
 ![ss]([https://github.com/h01000110/windows-95/raw/gh-pages/screenshot_2.png](https://raw.githubusercontent.com/AdilSadqi/windows-sadqi/NextCloud/raw/gh-pages/screenshot_2.png))
 
-Homepage: [Windows 95](https://win.asadqi.com)
+Homepage: [Windows Sadqi](https://win.asadqi.com)
 
 
 Author: [Adil Sadqi](https://github.com/AdilSadqi)
